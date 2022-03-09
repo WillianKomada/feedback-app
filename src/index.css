@@ -94,6 +94,10 @@ header {
   cursor: pointer;
 }
 
+.reverse .rating {
+  color: var(--background-color-blueDark);
+}
+
 .rating li:hover,
 .num-display {
   background: var(--color-pink);
@@ -107,6 +111,7 @@ header {
 [type="radio"]:checked ~ label {
   background: var(--color-pink);
   color: var(--color-light);
+  border: 1px var(--color-light) solid;
 }
 
 .input-group {
@@ -115,12 +120,19 @@ header {
   border: 1px solid var(--color-gray-200);
   padding: 8px 10px;
   border-radius: 8px;
+  margin-top: 20px;
 }
 
 input {
   flex-grow: 2;
   border: none;
   font-size: 16px;
+  background: none;
+  padding-right: 8px;
+}
+
+.reverse input {
+  color: var(--color-light);
 }
 
 input:focus {
@@ -190,7 +202,8 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  font-size: 14px;
+  color: var(--color-pink);
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -234,5 +247,6 @@ input:focus {
 
   .input-group input {
     width: 80%;
+    background: none;
   }
 }
