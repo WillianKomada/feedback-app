@@ -14,9 +14,11 @@ import { FeedbackList } from "./components/FeedbackList";
 import { FeedbackStats } from "./components/FeedbackStats";
 import { FeedbackForm } from "./components/FeedbackForm";
 import { AboutIconLink } from "./components/AboutIconLink";
+import { Post } from "./components/Post";
+
+import { Card } from "./components/shared/Card";
 
 import FeedBackData from "./data/FeedbackData";
-import { Card } from "./components/shared/Card";
 
 export default function App() {
   const [feedback, setFeedback] = useState(FeedBackData);
@@ -90,6 +92,8 @@ export default function App() {
           ></Route>
 
           <Route path="/about" element={<AboutPage />} />
+
+          <Route path="/post/:id/:name" element={<Post />} />
         </Routes>
       </div>
 
