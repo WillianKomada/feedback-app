@@ -15,11 +15,22 @@
   --color-pink: #ff6a95;
 }
 
+.active {
+  background: var(--background-color-blueDark);
+  color: var(--color-pink);
+}
+
+.reverse .active {
+  background: var(--color-light);
+  color: var(--color-pink);
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color-blueDark);
   color: var(--color-light);
   line-height: 1.6;
+  margin-bottom: 100px;
 }
 
 ul {
@@ -206,22 +217,30 @@ input:focus {
   color: var(--color-pink);
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: var(--color-pink);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link a {
   color: var(--color-light);
   cursor: pointer;
+  display: flex;
 }
 
 .about-link a:hover {
-  color: var(--color-pink);
+  color: var(--background-color-blueDark);
 }
 
 .about h1 {
