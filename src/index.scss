@@ -10,7 +10,7 @@
   --color-light: #ffffff;
   --color-dark: rgba(0, 0, 0, 0.4);
   --background-color-blueDark: #202142;
-  --color-gray-200: #cccccc;
+  --color-gray-200: #dddddd;
   --color-gray-700: #333333;
   --color-pink: #ff6a95;
 }
@@ -87,6 +87,20 @@ header button {
 }
 
 .rating li,
+.num-display {
+  position: relative;
+  background: var(--color-gray-200);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 19px;
+  border: 1px var(--color-light) solid;
+  transition: 0.3s;
+}
+
+.reverse .rating li,
 .num-display {
   position: relative;
   background: var(--color-light);
