@@ -16,12 +16,12 @@
 }
 
 .active {
-  background: var(--background-color-blueDark);
-  color: var(--color-pink);
+  background: var(--color-light);
+  color: var(--color-dark);
 }
 
 .reverse .active {
-  background: var(--color-light);
+  background: var(--color-dark);
   color: var(--color-pink);
 }
 
@@ -50,6 +50,13 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+
+header button {
+  background: transparent;
+  border: none;
+  color: var(--color-light);
+  cursor: pointer;
 }
 
 .card {

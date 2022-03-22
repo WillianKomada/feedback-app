@@ -11,7 +11,7 @@
 //   );
 // }
 
-import { Navigate, useNavigate, Routes, Route } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 
 export function Post() {
   const status = 200;
@@ -23,7 +23,6 @@ export function Post() {
   }
 
   const onClick = () => {
-    console.log("Hello");
     navigate("/about");
   };
 

@@ -11,7 +11,7 @@ export function AboutIconLink() {
           // hash: "#about",
         }}
       >
-        <FaQuestion size={30} />
+        <FaQuestion size={30} color="#fff" />
       </Link>
     </div>
   );

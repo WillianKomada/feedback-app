@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
+// import { useContext } from "react";
+// import FeedbackContext from "../context/FeedbackContext";
 
 export function Card({ children, reverse }) {
+  // const { cardReverse } = useContext(FeedbackContext);
+
   return <div className={`card ${reverse && "reverse"}`}>{children}</div>;
 
   // return (

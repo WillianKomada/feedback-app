@@ -1,6 +1,9 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import FeedbackContext from "../context/FeedbackContext";
 
-export function FeedbackStats({ feedback }) {
+export function FeedbackStats() {
+  const { feedback } = useContext(FeedbackContext);
+
   //Calc rating average
   let average =
     feedback.reduce((acc, cur) => {
@@ -16,7 +19,3 @@ export function FeedbackStats({ feedback }) {
     </div>
   );
 }
-
-FeedbackStats.propTypes = {
-  feedback: PropTypes.array.isRequired,
-};

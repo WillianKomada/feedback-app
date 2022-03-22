@@ -1,13 +1,25 @@
-import { useState } from "react";
-import { Card } from "./shared/Card";
-import { Button } from "./shared/Button";
+import { useContext, useEffect, useState } from "react";
+import FeedbackContext from "../context/FeedbackContext";
 import { RatingSelect } from "./RatingSelect";
+import { Button } from "./shared/Button";
+import { Card } from "./shared/Card";
 
-export function FeedbackForm({ handleAdd }) {
+export function FeedbackForm() {
   const [text, setText] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
   const [rating, setRating] = useState(10);
+
+  const { addFeedback, feedbackEdit, updateFeedback, cardReverse } =
+    useContext(FeedbackContext);
+
+  useEffect(() => {
+    if (feedbackEdit.edit === true) {
+      setBtnDisabled(false);
+      setText(feedbackEdit.item.text);
+      setRating(feedbackEdit.item.rating);
+    }
+  }, [feedbackEdit]);
 
   const handleTextChange = (e) => {
     if (text === "") {
@@ -33,14 +45,18 @@ export function FeedbackForm({ handleAdd }) {
         rating,
       };
 
-      handleAdd(newFeedback);
+      if (feedbackEdit.edit === true) {
+        updateFeedback(feedbackEdit.item.id, newFeedback);
+      } else {
+        addFeedback(newFeedback);
+      }
 
       setText("");
     }
   };
 
   return (
-    <Card reverse={true}>
+    <Card reverse={cardReverse}>
       <form onSubmit={handleSubmit}>
         <h2>How would you rate your service with us?</h2>
 
