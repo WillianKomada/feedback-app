@@ -8,7 +8,7 @@
 ## 📝 Sobre
 
 <p>
-  O Feedback App é uma aplicação desenvolvida afim de rever conceitos do ReactJS. Utilizando react-hooks, context api, tipagem nativa com prop-types, componentização, e funções básicas de crud. 🚀
+  O Feedback App é uma aplicação desenvolvida afim de rever conceitos do ReactJS. Utilizando react-hooks, context api, tipagem nativa com prop-types, componentização, funções básicas de crud e fake api com json server. 🚀
 </p>
 
 ---
