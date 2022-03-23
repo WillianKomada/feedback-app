@@ -20,8 +20,8 @@ export const FeedbackProvider = ({ children }) => {
     const data = await response.json();
 
     setFeedback(data);
-    setTimeout(() => setIsLoading(false), 2000);
-    // setIsLoading(false);
+    // setTimeout(() => setIsLoading(false), 2000);
+    setIsLoading(false);
   };
 
   const [cardReverse, setCardReverse] = useState(false);
